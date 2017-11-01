@@ -11,8 +11,15 @@
     state: latest
   become: yes
 
+- name: Create a "handy" folder for code on the Desktop, because this whole thing is temporary and it just needs to be there for easy access
+  file:
+    path: /Desktop/code
+    state: directory
+  become: yes
+
 - name: Install git
   apt:
     name: git
     state: latest
-    become: yes
+  become: yes
+

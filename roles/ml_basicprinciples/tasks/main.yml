@@ -1,0 +1,25 @@
+---
+- name: Install Python things
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - python-numpy
+    - python-scipy
+    - python-matplotlib
+    - python-pip
+  become: yes
+
+- name: Install additional Python things with pip
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - virtualenv
+    - pillow
+  become: yes
+
+# Note that the box uses ssh agent forwarding and will try to pull from the repo with the host machine's ssh key
+# Ignore errors in case you don't have your ssh keys set up to access github
+- name: Pull code from git repo 
+  git:
+  ignore_errors: true

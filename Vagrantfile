@@ -18,6 +18,10 @@ SCRIPT
 
 Vagrant.configure(2) do |config|
 
+  # If true, then any SSH connections made will enable agent forwarding.
+  # Default value: false
+  config.ssh.forward_agent = true
+
   config.vm.define "ubuntu-xenial" do |ubuntuxenial|
     ubuntuxenial.vm.box = "ubuntu/xenial64"
     ubuntuxenial.vm.network :private_network, ip: "#{IP}"
