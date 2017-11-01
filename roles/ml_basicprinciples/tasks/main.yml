@@ -19,7 +19,13 @@
   become: yes
 
 # Note that the box uses ssh agent forwarding and will try to pull from the repo with the host machine's ssh key
-# Ignore errors in case you don't have your ssh keys set up to access github
+# Ignore errors in case you don't have your ssh keys set up to access github or something
 - name: Pull code from git repo 
   git:
+    repo: "{{ item.repo }}"
+    dest: Desktop/code/"{{ item.dest }}"
+  with_items:
+    -
+      repo: git@github.com:kanatanssi/ml_basic_principles.git
+      dest: MLBPville
   ignore_errors: true
