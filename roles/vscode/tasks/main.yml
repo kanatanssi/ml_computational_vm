@@ -16,7 +16,10 @@
     state: latest
   become: yes
 
-# Retrieved 31.10.2017
+# Alternate installation. Download .deb file and install with that
+# The repo and key are automatically installed this way, but the thing is...
+# the above method will always get the latest version, whereas this one will get the one
+# retrieved on 31.10.2017
 #- name: Install Visual Studio Code
 #  apt:
 #    deb: https://az764295.vo.msecnd.net/stable/b813d12980308015bcd2b3a2f6efa5c810c33ba5/code_1.17.2-1508162334_amd64.deb
