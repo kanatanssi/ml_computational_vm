@@ -6,6 +6,7 @@
   roles:
   - general
   - vscode
+  - opera
 #  - pythonthings
   - ml_basicprinciples
   #- computational_ui
