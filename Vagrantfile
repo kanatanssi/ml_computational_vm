@@ -40,8 +40,8 @@ Vagrant.configure(2) do |config|
 #    if ! File.exist?(disk)
 #      vb.customize ['createhd', '--filename', disk, '--variant', 'Standard', '--size', 110 * 1024]
 #      vb.customize ['storageattach', "ubuntu-xenial",  '--storagectl', 'IDE', '--port', 1, '--device', 0, '--type', 'hdd', '--medium', disk] #controller could be "SATA Controller", but showvminfo states the storage controller to be IDE
-#    end
-#  end
+    end
+  end
 #  
 #    if ! File.exist?(disk)
 #      ubuntuxenial.vm.provision :shell, path: "bootstrap.sh"
