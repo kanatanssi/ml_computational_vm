@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  #vars:
+
+  roles:
+  - general
+  - vscode
+#  - pythonthings
+  - ml_basicprinciples
+  #- computational_ui
+
+#  tasks:
