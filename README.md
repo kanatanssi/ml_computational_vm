@@ -12,9 +12,9 @@ From this repo you'll need Vagrantfile, playbook.yml and the roles folder (or sp
 
 Also, in order to ssh and pull/commit to git you'll need to have ssh keys added to a github account
 
-    OBS! the box uses ssh key forwarding during provisioning at least, not sure if the ssh agent persists after provisioning, could be you need to add your boxes ssh key to your github account
+    OBS! the box uses ssh key forwarding during provisioning, meaning it will pull code from github with the host machine's ssh agent, but once you start using the machine you will need to run ssh-keygen and add the id_rsa.pub -key to your github account
 
-Ps. the box takes a couple of gigabytes of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something bigger than that (say, Matlab, which is 11gb as far as I know, you'll need to do some magic to add another virtual hd to the Vagrantfile, which is unnecessarily complex. I will do this sooner or later myself.).
+Ps. the box takes a couple of gb of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something bigger than that (say, Matlab, which is 11gb as far as I know, you'll need to do some magic to add another virtual hd to the Vagrantfile, which is unnecessarily complex. I will do this sooner or later myself.).
 
 ## Usage:
 
