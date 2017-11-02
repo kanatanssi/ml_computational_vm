@@ -24,8 +24,12 @@
   git:
     repo: "{{ item.repo }}"
     dest: Desktop/code/"{{ item.dest }}"
+    accept_hostkey: true
   with_items:
     -
-      repo: git@github.com:kanatanssi/ml_basic_principles.git
+      repo: https://version.aalto.fi/gitlab/junga1/MLBP2017Public.git
+      dest: Course_repo
+    -
+      repo: https://github.com/kanatanssi/ml_basic_principles.git
       dest: MLBPville
   ignore_errors: true
