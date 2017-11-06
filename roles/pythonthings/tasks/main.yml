@@ -1,0 +1,27 @@
+---
+- name: Install Python things
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - python-dev # required by a host of things
+    - python-numpy
+    - python-scipy # I think this already includes ipython and ipython-notebook
+    - python-matplotlib
+    - python-pip # for installing things obviously
+    - pylint # for linting in VScode
+#    - ipython
+#    - ipython-notebook #Apparently this is Jupyter notebook
+  become: yes
+
+- name: Install additional Python things with pip
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - virtualenv
+    - pillow
+  become: yes
+
+- name: Upgrade pip
+  shell: pip install --upgrade pip
+  become: yes

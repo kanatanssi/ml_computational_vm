@@ -1,0 +1,34 @@
+---
+# Python things moved to pythonthingsrole
+#- name: We use the ml_basicprinciples for basic preparations
+#  include_role:
+#    name: ml_basicprinciples
+
+#- name: Install ipython etc
+#  apt:
+#    name: "{{ item }}"
+#  with_items:
+#    - python-dev
+#    - ipython
+#    - ipython-notebook
+#  become: yes
+
+#- name: In addition we install SciPy
+#  pip:
+#    name: "{{ item }}"
+#  with_items:
+#    - SciPy
+#  become: yes
+
+- name: Pull git repo for computational ui course
+  git:
+#    repo: https://github.com/eth-ait/ComputationalInteraction17
+#    dest: Dekstop/code/computationalui
+      repo: "{{ item.repo }}"
+      dest: Desktop/code/computationalui/{{ item.dest }}
+  accept_hostkey: true
+  with_items:
+    -
+      repo: https://github.com/eth-ait/ComputationalInteraction17
+      dest: Dekstop/code/computationalui
+  ignore_errors: true

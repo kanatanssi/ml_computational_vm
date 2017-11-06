@@ -1,4 +1,8 @@
 ---
+#- name: Check if Opera is already installed
+#  shell: dpkg -l opera
+#  register: 
+
 - name: Add opera repo
   apt_repository: 
     repo: "deb http://deb.opera.com/opera/ stable non-free"

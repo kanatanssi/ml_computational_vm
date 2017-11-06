@@ -30,7 +30,8 @@ Vagrant.configure(2) do |config|
 
     ubuntuxenial.vm.provider :virtualbox do |vb|
 #      vb.memory = 2048
-      vb.memory = 4096
+#      vb.memory = 4096
+      vb.memory = 8192
       vb.cpus = 1
       vb.name = "ubuntu-xenial"
 #    end

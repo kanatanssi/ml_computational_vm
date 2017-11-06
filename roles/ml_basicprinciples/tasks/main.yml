@@ -1,35 +1,41 @@
 ---
-- name: Install Python things
-  apt:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - python-numpy
-    - python-scipy
-    - python-matplotlib
-    - python-pip
-  become: yes
+# Python things moved to pythonthings role
+#- name: Install Python things
+#  apt:
+#    name: "{{ item }}"
+#    state: latest
+#  with_items:
+#    - python-numpy
+#    - python-scipy
+#    - python-matplotlib
+#    - python-pip
+#    - pylint
+#  become: yes
 
-- name: Install additional Python things with pip
-  pip:
-    name: "{{ item }}"
-  with_items:
-    - virtualenv
-    - pillow
-  become: yes
+#- name: Install additional Python things with pip
+#  pip:
+#    name: "{{ item }}"
+#  with_items:
+#    - virtualenv
+#    - pillow
+#  become: yes
 
+#- name: Upgrade pip
+#  shell: pip install --upgrade pip
+#  become: yes
+ 
 # Note that the box uses ssh agent forwarding and will try to pull from the repo with the host machine's ssh key
 # Ignore errors in case you don't have your ssh keys set up to access github or something
-- name: Pull code from git repo 
+- name: Pull code from git repos
   git:
     repo: "{{ item.repo }}"
-    dest: Desktop/code/"{{ item.dest }}"
+    dest: Desktop/code/{{ item.dest }}
     accept_hostkey: true
   with_items:
     -
       repo: https://version.aalto.fi/gitlab/junga1/MLBP2017Public.git
-      dest: Course_repo
+      dest: course_repo
     -
       repo: https://github.com/kanatanssi/ml_basic_principles.git
-      dest: MLBPville
+      dest: mlbpville
   ignore_errors: true
