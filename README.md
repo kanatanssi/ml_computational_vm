@@ -37,28 +37,31 @@ Ps. the box takes a couple of gb of space I think. The hd for the vm probably ca
         * plus my own repos for the said courses because I'm lazy
 
 ## Usage:
+* open Terminal and navigate to the folder where you put Vagrantfile, playbook.yml and roles. Create vm with:
+        ```
+        vagrant up
+        ```
+* a bunch of text should roll in your Terminal window. Wait for it to stop, then reboot the vm with:
+        ```
+        vagrant reload
+        ```
+* **probably** (like 100%) you will then need to change the password for the user ubuntu. Ssh to your machine with:
+        ```
+        vagrant ssh
+        ```
+* on the virtual machine, change the password with:
+        ```
+        sudo passwd ubuntu
+        ```
+* open virtualbox management panel (on local). Rightclick ubuntu-xenial machine. Choose "show"
 
-* open Terminal and navigate to the folder where you put Vagrantfile, playbook.yml and roles
+* log in to vm via gui :)
 
-* vagrant up
-
-* a bunch of text should roll in your Terminal window. Wait for it to stop
-
-* type "vagrant reload" to reboot the virtual machine
-
-* **probably** (like 100%) you will then need to change the password for the user ubuntu. The default seems to be something weird
-
-* type "vagrant ssh" to ssh into your machine
-
-* in the virtual machine, type "sudo passwd ubuntu"
-
-* enter a new password (whatever you like)
-
-* open virtualbox management panel. Rightclick ubuntu-xenial machine. Choose "show"
-
-* log in via gui :)
-
-* open terminal (rightclick on desktop, choose "open terminal"), run "jupyter-notebook", computational us / malbp course repos should be downloaded under Desktop/code
+* open terminal (rightclick on desktop, choose "open terminal"), run jupyter with:
+        ```
+        jupyter-notebook
+        ```
+* computational us / malbp course repos should be downloaded under Desktop/code
 
 ## Stuff you might want to do:
 * change keyboard layout (click icon in left corner, select settings -> keyboard -> layout tab)
