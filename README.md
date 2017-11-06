@@ -1,5 +1,6 @@
 # Virtual Machine for ML Basic Principles/Computational UI
     OBS! Not sure how well this thing works on Windows. I use a Mac.
+    TODO: Only install Opera if not already installed (keeps rolling back updates with provisioning)
 ## Prereqs:
 
     Make sure you've got the following installed before you start:
@@ -8,8 +9,6 @@
     Ansible
 
 From this repo you'll need Vagrantfile, playbook.yml and the roles folder (or specific ones if you only want some of them idk (like, say, you're not doing ML basic principles.))
-
-    TODO: Only install Opera if not already installed (keeps rolling back updates with provisioning)
 
 Ps. the box takes a couple of gb of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something bigger than that (say, Matlab, which is 11gb as far as I know, you'll need to do some magic to add another virtual hd to the Vagrantfile, which is unnecessarily complex. I will do this sooner or later myself.).
 
