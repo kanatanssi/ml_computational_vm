@@ -3,7 +3,7 @@
 
     OBS! Not sure how well this thing works on Windows. I use a Mac.
 
-Make sure you've got the following installed before you start:
+    Make sure you've got the following installed before you start:
     Oracle VirtualBox,
     Vagrant,
     Ansible
@@ -13,6 +13,29 @@ From this repo you'll need Vagrantfile, playbook.yml and the roles folder (or sp
     TODO: Only install Opera if not already installed (keeps rolling back updates with provisioning)
 
 Ps. the box takes a couple of gb of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something bigger than that (say, Matlab, which is 11gb as far as I know, you'll need to do some magic to add another virtual hd to the Vagrantfile, which is unnecessarily complex. I will do this sooner or later myself.).
+
+## Stuff installed:
+    * python 2.7
+    * xubuntu
+    * git
+    * Visual Studio Code
+    * Opera browser (asks for update when you first start it) (and Firefox as a default, but it's slow af)
+    * python things:
+        * python-dev
+        * python-numpy
+        * python-scipy
+        * python-matplotlib
+        * python-pip
+        * pylint
+        * ipython
+        * ipython-notebook
+        * virtualenv
+        * pillow
+        * jupyter
+    * Following course repos:
+        * https://version.aalto.fi/gitlab/junga1/MLBP2017Public.git
+        * https://github.com/eth-ait/ComputationalInteraction17
+        * plus my own repos for the said courses because I'm lazy
 
 ## Usage:
 
