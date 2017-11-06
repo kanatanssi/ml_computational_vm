@@ -10,8 +10,8 @@
     - python-matplotlib
     - python-pip # for installing things obviously
     - pylint # for linting in VScode
-#    - ipython
-#    - ipython-notebook #Apparently this is Jupyter notebook
+    - ipython
+    - ipython-notebook #Apparently this is Jupyter notebook or something
   become: yes
 
 - name: Install additional Python things with pip
@@ -20,6 +20,7 @@
   with_items:
     - virtualenv
     - pillow
+    - jupyter
   become: yes
 
 - name: Upgrade pip

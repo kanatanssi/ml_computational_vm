@@ -26,7 +26,7 @@
 #    dest: Dekstop/code/computationalui
       repo: "{{ item.repo }}"
       dest: Desktop/code/computationalui/{{ item.dest }}
-  accept_hostkey: true
+      accept_hostkey: true
   with_items:
     -
       repo: https://github.com/eth-ait/ComputationalInteraction17
