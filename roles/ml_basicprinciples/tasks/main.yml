@@ -29,7 +29,7 @@
 - name: Pull code from git repos
   git:
     repo: "{{ item.repo }}"
-    dest: Desktop/code/{{ item.dest }}
+    dest: Desktop/code/mlbp/{{ item.dest }}
     accept_hostkey: true
   with_items:
     -
@@ -37,5 +37,5 @@
       dest: course_repo
     -
       repo: https://github.com/kanatanssi/ml_basic_principles.git
-      dest: mlbpville
+      dest: mlbpkanatanssi
   ignore_errors: true

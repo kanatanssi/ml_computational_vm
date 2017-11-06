@@ -30,5 +30,8 @@
   with_items:
     -
       repo: https://github.com/eth-ait/ComputationalInteraction17
-      dest: Dekstop/code/computationalui
+      dest: course_repo
+    -
+      repo: https://github.com/kanatanssi/computationalui.git
+      dest: computationaluikanatanssi
   ignore_errors: true
