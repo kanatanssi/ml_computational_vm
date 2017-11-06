@@ -34,6 +34,11 @@ Ps. the box takes a couple of gb of space I think. The hd for the vm probably ca
         * https://version.aalto.fi/gitlab/junga1/MLBP2017Public.git
         * https://github.com/eth-ait/ComputationalInteraction17
         * plus my own repos for the said courses because I'm lazy
+## Vm specs (change in Vagrantfile if you want):
+* max 10gb hd I think
+* cpu 1 core
+* 8192mb memory
+* name: ubuntu-xenial
 
 ## Usage:
 * open Terminal and navigate to the folder where you put Vagrantfile, playbook.yml and roles. Create vm with:
