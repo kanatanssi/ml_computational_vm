@@ -23,13 +23,16 @@ Ps. the box takes a couple of gb of space I think. The hd for the vm probably ca
 
 * a bunch of text should roll in your Terminal window and eventually a gui for the virtual machine should open
 
-* probably you will then need to type "vagrant ssh" and "sudo passwd ubuntu", then enter a new password (whatever you like, even blank is kinda okay)
+* probably you will then need to change the password for the user ubuntu. The default seems to be something
+
+* type "vagrant ssh" to ssh into your machine
+
+* in the virtual machine, type "sudo passwd ubuntu"
+
+* enter a new password (whatever you like, even blank is kinda okay)
 
 * log in via gui :)
 
 If the previous fails, then there could be something wrong with your installation of VirtualBox or Vagrant, you might be experiencing connection issues or it might just be a random fail! Try again with vagrant up --provision just to be sure :)
-    
-Also you might be unable to log in with the default ubuntu user with the default password "password"
-To change the password, ssh into your newly created ubuntu virtual machine with: vagrant ssh
 
 If the GUI does not show up, head to the VirtualBox management window, right click the "ubuntu-xenial" box and select "Show".
