@@ -23,6 +23,8 @@ Ps. the box takes a couple of gb of space I think. The hd for the vm probably ca
 
 * a bunch of text should roll in your Terminal window and eventually a gui for the virtual machine should open
 
+* if no GUI, then type "vagrant reload" to reboot the virtual machine.
+
 * probably you will then need to change the password for the user ubuntu. The default seems to be something
 
 * type "vagrant ssh" to ssh into your machine
