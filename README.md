@@ -1,7 +1,6 @@
 # Virtual Machine for ML Basic Principles/Computational UI
-## Prereqs:
-
     OBS! Not sure how well this thing works on Windows. I use a Mac.
+## Prereqs:
 
     Make sure you've got the following installed before you start:
     Oracle VirtualBox,
