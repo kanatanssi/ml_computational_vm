@@ -38,6 +38,6 @@ Ps. the box takes a couple of gb of space I think. The hd for the vm probably ca
 
 * open terminal (rightclick on desktop, choose "open terminal"), run "jupyter-notebook", computational us / malbp course repos should be downloaded under Desktop/code
 
-    Stuff you might want to do:
-    * change keyboard layout (click icon in left corner, select settings -> keyboard -> layout tab)
-    * run ssh-keygen, add your ssh key to your github account
+## Stuff you might want to do:
+* change keyboard layout (click icon in left corner, select settings -> keyboard -> layout tab)
+* run ssh-keygen, add your ssh key to your github account
