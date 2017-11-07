@@ -10,7 +10,7 @@
 
 From this repo you'll need Vagrantfile, playbook.yml and the roles folder (or specific ones if you only want some of them idk (like, say, you're not doing ML basic principles.))
 
-Ps. the box takes a couple of gb of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something bigger than that (say, Matlab, which is 11gb as far as I know, you'll need to do some magic to add another virtual hd to the Vagrantfile, which is unnecessarily complex. I will do this sooner or later myself.).
+Ps. the box takes a couple of gb of space I think. The hd for the vm probably caps at 10gb, so if you wish to use something that requires bigger than that (say, Matlab, which is an extra 3-4gb as far as I know) you'll need to do some magic to add another virtual hd to the Vagrantfile (which is unnecessarily complex. I will do this sooner or later myself.).
 
 ## Stuff installed:
     * python 2.7
